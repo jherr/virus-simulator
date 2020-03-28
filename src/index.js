@@ -14,7 +14,7 @@ import {
 import {
   SIMULATOR_SIZE,
 } from './constants';
-import useInterval from './useInterval';
+import useRequestAnimationFrame from './useRequestAnimationFrame';
 
 import GenerationsGraph from './components/GenerationsGraph';
 import Simulator from './components/Simulator';
@@ -45,9 +45,9 @@ const App = () => {
     setState(createInitialState(state));
   }
 
-  useInterval(() => {
+  useRequestAnimationFrame(() => {
     setState(runGeneration(state));
-  }, 50);
+  });
 
   return (
     <Container>
