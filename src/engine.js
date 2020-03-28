@@ -13,7 +13,7 @@ export const generatePeople = (state) =>
       x: Math.random() * BOX_SIZE,
       y: Math.random() * BOX_SIZE,
       direction: Math.random() * (Math.PI * 2),
-      speed: Math.random() * state.motion,
+      speed: state.motion,
       status: i === 0 ? 1 : 0,
       sickness: state.infectionLength,
     }));
