@@ -11,8 +11,7 @@ export default ({ people, radius }) => (
     height={SIMULATOR_SIZE}
     viewBox={`0 0 ${BOX_SIZE} ${BOX_SIZE}`}
     style={{
-      border: '1px solid white',
-      background: 'black',
+      overflow: 'hidden'
     }}
   >
     {

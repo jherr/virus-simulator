@@ -10,7 +10,7 @@ export default ({ generations }) => {
   return (
     <svg
       width="100%"
-      height={PEOPLE}
+      height={PEOPLE / 2}
     >
       {
         generations.map(({ generation, counts }, index) => (
@@ -21,7 +21,7 @@ export default ({ generations }) => {
               x={`${index * widthFactor}%`}
               width={`${widthFactor}%`}
               y={0}
-              height={counts[-1]}
+              height={counts[-1] / 2}
               style={{
                 fill: COLORS[-1]
               }}
@@ -29,8 +29,8 @@ export default ({ generations }) => {
             {counts[1] > 0 && (<rect
               x={`${index * widthFactor}%`}
               width={`${widthFactor}%`}
-              y={PEOPLE - counts[1]}
-              height={counts[1]}
+              y={(PEOPLE - counts[1]) / 2}
+              height={counts[1] / 2}
               style={{
                 fill: COLORS[1]
               }}

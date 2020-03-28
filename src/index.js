@@ -23,7 +23,7 @@ import Controls from './components/Controls';
 const useStyles = makeStyles({
   root: {
     display: 'grid',
-    gridTemplateColumns: `500px ${SIMULATOR_SIZE}px`,
+    gridTemplateColumns: `450px ${SIMULATOR_SIZE}px`,
     marginTop: '1em',
     gridGap: 10,
   },
@@ -75,10 +75,12 @@ const App = () => {
               generations={state.generations}
             />
           </div>
-          <Simulator
-            people={state.people}
-            radius={state.radius}
-          />
+          <div className={classes.graphBox}>
+            <Simulator
+              people={state.people}
+              radius={state.radius}
+            />
+          </div>
         </div>
       </div>
     </Container>
